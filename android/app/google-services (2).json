@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "235335858292",
+    "project_id": "mbolotaxi-799cf",
+    "storage_bucket": "mbolotaxi-799cf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235335858292:android:6cdbaf99ed536cd220f921",
+        "android_client_info": {
+          "package_name": "com.example.mbolotaxi_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwpAYXZZAkNRhrVZ_KK2qeIMsZ701RR5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

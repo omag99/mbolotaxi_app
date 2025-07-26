@@ -1,0 +1,55 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // Le plugin Gradle Flutter doit être appliqué après Android et Kotlin
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.mbolotaxi_app"
+    compileSdk = 35 // Remplace flutter.compileSdkVersion par un nombre fixe
+    ndkVersion = "26.1.10909125" // Remplace flutter.ndkVersion si nécessaire
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11" // Doit être une chaîne
+    }
+
+    defaultConfig {
+        applicationId = "com.example.mbolotaxi_app"
+        minSdk = 23
+        targetSdk = 34 // Remplace flutter.targetSdkVersion
+        versionCode = 1 // Remplace flutter.versionCode
+        versionName = "1.0.0" // Remplace flutter.versionName
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../keystore.jks") // Assurez-vous d'avoir un keystore
+            storePassword "votre_mot_de_passe"
+            keyAlias "votre_alias"
+            keyPassword "votre_mot_de_passe"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0"  // Version compatible
+    // Vérifie la version Kotlin
+}

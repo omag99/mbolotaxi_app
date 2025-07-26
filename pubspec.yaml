@@ -1,0 +1,63 @@
+name: mbolotaxi_app
+description: "Développement d'une application mobile de paiement pour taxis."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_dotenv: 5.2.1
+    # Autres dépendances
+    #url_launcher: ^6.2.1  # ou la dernière version
+    #http: ^1.1.0 # ou la dernière version (Quand intégrer l'API : L'intégration de l'API Airtel Money doit se faire dans la fonction onPressed de votre ElevatedButton, avant d'afficher la boîte de dialogue "Paiement réussi". C'est à ce moment que vous voulez réellement initier la transaction).
+
+#(Packages HTTP : Utilisez le package http de Flutter pour faire des requêtes HTTP à l'API Airtel Money. Ajoutez la dépendance à votre pubspec.yaml)
+
+
+  cupertino_icons: ^1.0.8
+
+  # Firebase dependencies
+  firebase_core: ^3.12.1
+  firebase_auth: ^5.5.1
+  cloud_firestore: ^5.6.5
+  firebase_messaging: ^15.2.4
+  firebase_storage: ^12.4.4
+
+  # Google Maps and location dependencies
+  google_maps_flutter: ^2.5.3
+  geolocator: ^13.0.2
+  geocoding: ^3.0.0
+  permission_handler: ^11.0.1
+  uuid: ^4.0.0
+  # Other dependencies
+  flutter_stripe: ^11.4.0
+  provider: ^6.1.2
+  http: ^1.3.0
+  equatable: ^2.0.7
+  intl: ^0.20.2
+  flutter_polyline_points: ^2.1.0
+  url_launcher: ^6.2.4
+  barcode_widget: ^2.0.3
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/logo_mysalesoft.png
+  # fonts:
+  #   - family: MyCustomFont
+  #     fonts:
+  #       - asset: fonts/MyCustomFont-Regular.ttf
+  #       - asset: fonts/MyCustomFont-Bold.ttf
+  #         weight: 700
